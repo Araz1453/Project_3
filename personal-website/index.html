@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+    </header>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Hello! I'm glad you're here. My name is Araz.</p>
+        </section>
+        <section>
+            <h2>My Projects</h2>
+            <ul style="list-style: none; padding: 0; display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                <li style="flex: 1; min-width: 220px;">
+                    <div class="project-card">
+                        <h3>Project One</h3>
+                        <p>Building logic gate with Group 9.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </li>
+                <li style="flex: 1; min-width: 220px;">
+                    <div class="project-card">
+                        <h3>Project Two</h3>
+                        <p>A weather app using JavaScript and APIs.</p>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </li>
+                <li style="flex: 1; min-width: 220px;">
+                    <div class="project-card">
+                        <h3>Project Three</h3>
+                        <p>GitHub repository of this website.</p>
+                        <a href="" class="project-link">View Project</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div id="formMessage"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Personal Website</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
