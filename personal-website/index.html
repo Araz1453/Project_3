@@ -11,14 +11,21 @@
         <h1>Welcome to My Personal Website</h1>
     </header>
     <main>
-        <section>
+        <section class="intro">
             <h2>About Me</h2>
-            <p>Hello! I'm glad you're here. My name is Araz.</p>
+            <p>Hi, I'm Araz! I specialize in HTML, CSS, and JavaScript, and I also have experience with Python and C++. I'm currently located in [Your Location] and I'm open to work opportunities.</p>
+            <p>Feel free to reach out to me at my personal email: <a href="mailto:arazoruc07@mail.ru">arazoruc07@mail.ru</a> or my work email: <a href="mailto:aorujlu26543@ada.edu.az">aorujlu26543@ada.edu.az</a>.</p>
+            <h3>Skills</h3>
+            <ul>
+                <li>HTML / CSS / JavaScript</li>
+                <li>Python / C++</li>
+                <li>Git / GitHub</li>
+            </ul>
         </section>
         <section>
             <h2>My Projects</h2>
-            <ul style="list-style: none; padding: 0; display: flex; gap: 1.5rem; flex-wrap: wrap;">
-                <li style="flex: 1; min-width: 60px;">
+            <ul style="list-style: none; padding: 0; display: flex; gap: 1.5rem; justify-content: center;">
+                <li style="flex: 0 0 auto; width: 300px;">
                     <div class="project-card">
                         <img src="image1.jpg" alt="Project One Image" class="project-image" style="width:100%;height:auto;border-radius:8px;">
                         <h3>Project One</h3>
@@ -26,7 +33,7 @@
                         <a href="https://youtu.be/Llo4sq2kusk?feature=shared" class="project-link">View Project</a>
                     </div>
                 </li>
-                <li style="flex: 1; min-width: 60px;">
+                <li style="flex: 0 0 auto; width: 300px;">
                     <div class="project-card">
                         <img src="image2.png" alt="Project Two Image" class="project-image" style="width:100%;height:auto;border-radius:8px;">
                         <h3>Project Two</h3>
@@ -34,7 +41,7 @@
                         <a href="#" class="project-link">View Project</a>
                     </div>
                 </li>
-                <li style="flex: 1; min-width: 60px;">
+                <li style="flex: 0 0 auto; width: 300px;">
                     <div class="project-card">
                         <img src="image3.png" alt="Project Three Image" class="project-image" style="width:100%;height:auto;border-radius:8px;">
                         <h3>Project Three</h3>
@@ -45,18 +52,31 @@
             </ul>
         </section>
         <section>
-            <h2>Contact</h2>
+            <h2 style="color: black;">Contact</h2>
             <form id="contactForm">
-                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="text" id="name" placeholder="Your Name" required style="color: white;">
                 <input type="email" id="email" placeholder="Your Email" required>
                 <textarea id="message" placeholder="Your Message" required></textarea>
                 <button type="submit">Send</button>
             </form>
             <div id="formMessage"></div>
         </section>
+        <section>
+            <h2 style="color: black;">Connect With Me</h2>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: center;">
+                <div>
+                    <p><strong>Email:</strong> aorujlu26543@ada.edu.az</p>
+                </div>
+                <div>
+                    <p><strong>Instagram:</strong> <a href="https://instagram.com/orclrz" target="_blank" style="color: #1565c0; text-decoration: none;">@orclrz</a></p>
+                </div>
+                <div>
+                    <p><strong>CodeAcademy:</strong> <a href="https://www.codecademy.com/profiles/chip9254918536" target="_blank" style="color: #1565c0; text-decoration: none;">My Profile</a></p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2025 My Personal Website</p>
     </footer>
     <script src="script.js"></script>
 </body>
