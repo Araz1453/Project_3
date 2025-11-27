@@ -8,12 +8,25 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Personal Website</h1>
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <h1 style="margin: 0; font-size: 1.5rem;">Araz</h1>
+            <nav style="display: flex; gap: 2rem;">
+                <a href="#projects-section" style="color: #87CEEB; text-decoration: none; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='#5DADE2'" onmouseout="this.style.color='#87CEEB'" onclick="document.getElementById('projects-section').scrollIntoView({behavior: 'smooth'}); return false;">Projects</a>
+                <a href="#about-section" style="color: #87CEEB; text-decoration: none; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='#5DADE2'" onmouseout="this.style.color='#87CEEB'" onclick="document.getElementById('about-section').scrollIntoView({behavior: 'smooth'}); return false;">About</a>
+                <a href="#contact-section" style="color: #87CEEB; text-decoration: none; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='#5DADE2'" onmouseout="this.style.color='#87CEEB'" onclick="document.getElementById('contact-section').scrollIntoView({behavior: 'smooth'}); return false;">Contact</a>
+            </nav>
+        </div>
     </header>
     <main>
         <section class="intro">
+            <h1>Hi, I'm Araz</h1>
+            <p>My major is BSEEE (Electrical and Electronic Engineering).</p>
+            <p>This is my first personal website.</p>
+            <button class="view-projects-btn" onclick="document.getElementById('projects-section').scrollIntoView({behavior: 'smooth'});">View My Projects</button>
+        </section>
+        <section id="about-section">
             <h2>About Me</h2>
-            <p>Hi, I'm Araz! I specialize in HTML, CSS, and JavaScript, and I also have experience with Python and C++. I'm currently located in [Your Location] and I'm open to work opportunities.</p>
+            <p>I specialize in HTML, CSS, and JavaScript, and I also have experience with Python and C++. I'm open to work opportunities.</p>
             <p>Feel free to reach out to me at my personal email: <a href="mailto:arazoruc07@mail.ru">arazoruc07@mail.ru</a> or my work email: <a href="mailto:aorujlu26543@ada.edu.az">aorujlu26543@ada.edu.az</a>.</p>
             <h3>Skills</h3>
             <ul>
@@ -22,7 +35,7 @@
                 <li>Git / GitHub</li>
             </ul>
         </section>
-        <section>
+        <section id="projects-section">
             <h2>My Projects</h2>
             <ul style="list-style: none; padding: 0; display: flex; gap: 1.5rem; justify-content: center;">
                 <li style="flex: 0 0 auto; width: 300px;">
@@ -51,12 +64,12 @@
                 </li>
             </ul>
         </section>
-        <section>
+        <section id="contact-section">
             <h2 style="color: black;">Contact</h2>
             <form id="contactForm">
                 <input type="text" id="name" placeholder="Your Name" required style="color: white;">
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
+                <input type="email" id="email" placeholder="Your Email" required style="color: white;">
+                <textarea id="message" placeholder="Your Message" required style="color: white;"></textarea>
                 <button type="submit">Send</button>
             </form>
             <div id="formMessage"></div>
