@@ -101,6 +101,7 @@ html {
     display: block;
     margin: 0 0 1rem 0;
 }
+ 
 
 body {
     background: var(--bg);
@@ -238,9 +239,23 @@ footer {
 }
 .intro-left {
     flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+ 
+.intro-image {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%; /* circular portrait */
+    flex-shrink: 0;
+    border: 2px solid var(--accent);
 }
 /* intro-right removed - header nav is used */
 /* keep intro-inner responsive layout */
 @media (max-width: 700px) {
     .intro-inner { flex-direction: column; }
+    .intro-left { flex-direction: column; align-items: flex-start; }
+    .intro-image { width: 120px; height: 120px; margin-bottom: 0.5rem; }
 }
