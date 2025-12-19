@@ -1,33 +1,91 @@
+:root {
+    --bg: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --accent: #87CEEB;
+    --text: #87CEEB;
+    --muted: rgba(135,206,235,0.12);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Layout container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header / Nav */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-title {
+    font-size: 1.25rem;
+    color: var(--accent);
+    font-weight: 700;
+}
+.site-nav {
+    display: flex;
+    gap: 1.25rem;
+}
+.nav-link {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.18s ease;
+}
+.nav-link:hover {
+    color: #5DADE2;
+}
+
 /* Project Cards */
+.project-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.project-item {
+    flex: 0 0 auto;
+    width: 300px;
+}
 .project-card {
-    background: #1a1a1a;
-    color: #87CEEB;
+    background: var(--card-bg);
+    color: var(--accent);
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(135,206,235,0.2);
+    box-shadow: 0 2px 8px rgba(135,206,235,0.16);
     padding: 1.2rem;
     margin-bottom: 0.5rem;
-    transition: box-shadow 0.3s, transform 0.15s;
+    transition: box-shadow 0.28s, transform 0.18s;
     cursor: pointer;
-    border: 1px solid #87CEEB;
+    border: 1px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+    min-height: 360px;
 }
 .project-card:hover {
-    box-shadow: 0 0 20px rgba(135, 206, 235, 0.5), 0 0 40px rgba(135, 206, 235, 0.3), inset 0 0 20px rgba(135, 206, 235, 0.1);
+    box-shadow: 0 8px 30px rgba(135, 206, 235, 0.28), inset 0 0 14px rgba(135,206,235,0.06);
     transform: translateY(-6px);
 }
 .project-card h3 {
-    margin-top: 0;
-    color: #87CEEB;
+    margin-top: 0.5rem;
+    color: var(--accent);
 }
 .project-link {
     display: inline-block;
-    margin-top: 0.7rem;
+    margin-top: auto;
     color: #000000;
-    background: #87CEEB;
-    padding: 0.4rem 1rem;
+    background: var(--accent);
+    padding: 0.45rem 1rem;
     border-radius: 4px;
     text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s, color 0.2s, transform 0.12s;
+    font-weight: 600;
+    transition: background 0.18s, color 0.18s, transform 0.12s;
     cursor: pointer;
 }
 .project-link:hover {
@@ -35,19 +93,18 @@
     color: #000000;
     transform: translateY(-3px);
 }
-/* Project Card Images */
 .project-image {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 160px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 6px;
     display: block;
-    margin: 0 auto 1rem auto;
+    margin: 0 0 1rem 0;
 }
 
 body {
-    background: #0a0a0a;
-    color: #87CEEB;
+    background: var(--bg);
+    color: var(--text);
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -65,10 +122,8 @@ body {
 }
 
 header {
-    background: #000000;
-    padding: 2rem;
-    text-align: center;
-    border-bottom: 2px solid #87CEEB;
+    background: transparent;
+    padding: 1rem 0;
     opacity: 0;
 }
 
@@ -78,11 +133,11 @@ header.visible {
 
 section {
     margin-bottom: 2rem;
-    background: #1a1a1a;
+    background: var(--card-bg);
     border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(135,206,235,0.1);
-    border: 1px solid #87CEEB;
+    padding: 1.25rem;
+    box-shadow: 0 2px 8px rgba(135,206,235,0.08);
+    border: 1px solid rgba(135,206,235,0.14);
     opacity: 0;
 }
 
@@ -124,6 +179,34 @@ button:hover {
     padding: 0.8rem 2rem;
     font-size: 1rem;
 }
+/* Contact / Connect styling */
+.contact-section {
+    /* leave dark by default; can switch to white if you want */
+    background: var(--card-bg);
+}
+.contact-title {
+    color: #000000;
+}
+.contact-section input,
+.contact-section textarea {
+    color: #ffffff; /* keep name/email/message text readable as you requested before */
+}
+.connect-section .connect-title {
+    color: #000000;
+}
+.connect-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.connect-link {
+    color: var(--accent);
+    text-decoration: none;
+}
+.connect-link:hover {
+    color: #5DADE2;
+}
 footer {
     background: #000000;
     color: #87CEEB;
@@ -133,4 +216,31 @@ footer {
     width: 100%;
     bottom: 0;
     border-top: 1px solid #87CEEB;
+}
+
+/* Intro tweaks */
+.intro h1 {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+@media (max-width: 700px) {
+    .site-nav { display: none; }
+    .project-item { width: 100%; }
+    .project-image { height: 200px; }
+}
+
+/* Intro two-column layout */
+.intro-inner {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+.intro-left {
+    flex: 1 1 auto;
+}
+/* intro-right removed - header nav is used */
+/* keep intro-inner responsive layout */
+@media (max-width: 700px) {
+    .intro-inner { flex-direction: column; }
 }
