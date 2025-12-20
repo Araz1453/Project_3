@@ -208,6 +208,21 @@ button:hover {
 .connect-link:hover {
     color: #5DADE2;
 }
+
+.connect-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+}
+
+.connect-link[href*="github"] .connect-icon {
+    background: #fff;
+    border: 1.5px solid #87CEEB;
+    padding: 2px;
+}
 footer {
     background: #000000;
     color: #87CEEB;
