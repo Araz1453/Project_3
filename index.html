@@ -1,27 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container site-header">
-            <div class="site-title">Araz</div>
-            <nav class="site-nav">
-                <a class="nav-link" href="#projects-section">Projects</a>
-                <a class="nav-link" href="#about-section">About</a>
-                <a class="nav-link" href="#contact-section">Contact</a>
-            </nav>
-        </div>
-    </header>
-    <main>
+---
+layout: default
+title: Home
+---
+
+<main>
         <section class="intro">
             <div class="intro-inner container">
                 <div class="intro-left">
-                    <img src="image%204.jpeg" alt="Araz portrait" class="intro-image">
+                    <img src="{{ '/image%204.jpeg' | relative_url }}" alt="Araz portrait" class="intro-image">
                     <h1>Hi, I'm Araz</h1>
                     <p>My major is BSEEE (Electrical and Electronic Engineering).</p>
                     <p>This is my first personal website.</p>
@@ -46,7 +32,7 @@
             <ul class="project-list">
                 <li class="project-item">
                     <div class="project-card">
-                        <img src="image1.jpg" alt="Project One Image" class="project-image">
+                        <img src="{{ '/image1.jpg' | relative_url }}" alt="Project One Image" class="project-image">
                         <h3>Project One</h3>
                         <p>Building logic gate with Group 9.</p>
                         <a href="https://youtu.be/Llo4sq2kusk?feature=shared" class="project-link">View Project</a>
@@ -54,7 +40,7 @@
                 </li>
                 <li class="project-item">
                     <div class="project-card">
-                        <img src="image2.png" alt="Project Two Image" class="project-image">
+                        <img src="{{ '/image2.png' | relative_url }}" alt="Project Two Image" class="project-image">
                         <h3>Project Two</h3>
                         <p> Teaching Students "Make a Flappy game"</p>
                         <a href="https://youtu.be/sAm-JW9ZbZg?si=5mwApALWu5HH5Kz_" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
@@ -62,7 +48,7 @@
                 </li>
                 <li class="project-item">
                     <div class="project-card">
-                        <img src="image3.png" alt="Project Three Image" class="project-image">
+                        <img src="{{ '/image3.png' | relative_url }}" alt="Project Three Image" class="project-image">
                         <h3>Project Three</h3>
                         <p>GitHub repository of this website.</p>
                         <a href="https://github.com/Araz1453/Project_3" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
@@ -87,19 +73,15 @@
                     <p><strong>Email:</strong> aorujlu26543@ada.edu.az</p>
                 </div>
                 <div>
-                    <p><strong>Instagram:</strong> <a class="connect-link" href="https://instagram.com/orclrz" target="_blank" rel="noopener noreferrer"><img src="image5.jfif" alt="Instagram" class="connect-icon"></a></p>
+                    <p><strong>Instagram:</strong> <a class="connect-link" href="https://instagram.com/orclrz" target="_blank" rel="noopener noreferrer"><img src="{{ '/image5.jfif' | relative_url }}" alt="Instagram" class="connect-icon"></a></p>
                 </div>
                 <div>
-                    <p><strong>GitHub:</strong> <a class="connect-link" href="https://github.com/Araz1453" target="_blank" rel="noopener noreferrer"><img src="image6.png" alt="GitHub" class="connect-icon"></a></p>
+                    <p><strong>GitHub:</strong> <a class="connect-link" href="https://github.com/Araz1453" target="_blank" rel="noopener noreferrer"><img src="{{ '/image6.png' | relative_url }}" alt="GitHub" class="connect-icon"></a></p>
                 </div>
                 <div>
-                    <p><strong>CodeAcademy:</strong> <a class="connect-link" href="https://www.codecademy.com/profiles/chip9254918536" target="_blank"><img src="image7.jpg" alt="CodeAcademy" class="connect-icon"></a></p>
+                    <p><strong>CodeAcademy:</strong> <a class="connect-link" href="https://www.codecademy.com/profiles/chip9254918536" target="_blank"><img src="{{ '/image7.jpg' | relative_url }}" alt="CodeAcademy" class="connect-icon"></a></p>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+    
